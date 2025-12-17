@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Dark technical canvas theme */
+    --background: 220 20% 6%;
+    --foreground: 210 20% 90%;
+
+    --card: 220 18% 10%;
+    --card-foreground: 210 20% 90%;
+
+    --popover: 220 18% 10%;
+    --popover-foreground: 210 20% 90%;
+
+    /* Cyan/teal primary - the glow color */
+    --primary: 185 80% 55%;
+    --primary-foreground: 220 20% 6%;
+
+    /* Purple secondary for control points */
+    --secondary: 280 70% 60%;
+    --secondary-foreground: 210 20% 98%;
+
+    /* Muted for subtle elements */
+    --muted: 220 15% 15%;
+    --muted-foreground: 215 15% 55%;
+
+    /* Orange accent for endpoints */
+    --accent: 25 90% 55%;
+    --accent-foreground: 220 20% 6%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 185 80% 55%;
+
+    --radius: 0.75rem;
+
+    /* Custom colors for visualization */
+    --curve-glow: 185 90% 60%;
+    --tangent: 185 40% 45%;
+    --endpoint: 25 90% 55%;
+    --control-point: 280 70% 60%;
+    --grid: 220 15% 12%;
+
+    /* Sidebar defaults */
+    --sidebar-background: 220 18% 8%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 185 80% 55%;
+    --sidebar-primary-foreground: 220 20% 6%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 185 80% 55%;
+  }
+
+  .dark {
+    --background: 220 20% 6%;
+    --foreground: 210 20% 90%;
+    --card: 220 18% 10%;
+    --card-foreground: 210 20% 90%;
+    --popover: 220 18% 10%;
+    --popover-foreground: 210 20% 90%;
+    --primary: 185 80% 55%;
+    --primary-foreground: 220 20% 6%;
+    --secondary: 280 70% 60%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 25 90% 55%;
+    --accent-foreground: 220 20% 6%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 185 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+
+  code, .mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.4),
+                0 0 40px hsl(var(--primary) / 0.2);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.6),
+                 0 0 20px hsl(var(--primary) / 0.3);
+  }
+
+  .canvas-container {
+    background: radial-gradient(
+      ellipse at center,
+      hsl(var(--card)) 0%,
+      hsl(var(--background)) 100%
+    );
+  }
+}
