@@ -8,6 +8,8 @@ The implementation is built **from scratch** using **React, HTML Canvas, and Typ
 The curve dynamically updates at runtime, visualizes **tangent vectors**, and uses a **spring–damping physics model** to create smooth and natural motion.
 
 ---
+Demo video
+https://github.com/user-attachments/assets/bc163f6d-b40f-406b-a727-d2de66260c10
 
 ## Features
 
@@ -94,6 +96,9 @@ Each frame performs the following steps:
 6. Draw tangent vectors
 7. Render control points and labels
 8. Display FPS counter
+
+
+
 
 Rendering is throttled to the selected target FPS.
 
